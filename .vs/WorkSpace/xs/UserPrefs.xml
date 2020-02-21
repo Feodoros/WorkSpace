@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{190DBEE8-63A4-4481-A510-E9F7A7198A31}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DirectoryDeepth/Program.cs">
+    <Files>
+      <File FileName="BinSearch/Program.cs" Line="11" Column="13" />
+      <File FileName="DirectoryDeepth/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WorkSpace" expanded="True">
+            <Node name="BinSearch" expanded="True" />
+            <Node name="DirectoryDeepth" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BinSearch PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

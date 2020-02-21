@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{D6C2F4BC-D56D-4BF3-8444-7F0615DFA206}</ProjectGuid>
+    <ProjectGuid>{B4C8F2E2-F48F-4CC5-9F18-7E77525C9283}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BinSearch</RootNamespace>
-    <AssemblyName>BinSearch</AssemblyName>
+    <RootNamespace>DirDepth</RootNamespace>
+    <AssemblyName>DirDepth</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Fedor\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Fedor\\.nuget\\packages"
+    ]
+  }
+}

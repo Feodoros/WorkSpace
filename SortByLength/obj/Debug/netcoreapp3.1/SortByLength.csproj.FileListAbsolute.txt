@@ -1,0 +1,11 @@
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.exe
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.deps.json
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.runtimeconfig.json
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.runtimeconfig.dev.json
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.dll
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\bin\Debug\netcoreapp3.1\SortByLength.pdb
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\obj\Debug\netcoreapp3.1\SortByLength.csprojAssemblyReference.cache
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\obj\Debug\netcoreapp3.1\SortByLength.AssemblyInfoInputs.cache
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\obj\Debug\netcoreapp3.1\SortByLength.AssemblyInfo.cs
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\obj\Debug\netcoreapp3.1\SortByLength.dll
+C:\Users\Fedor\RiderProjects\WorkSpace\SortByLength\obj\Debug\netcoreapp3.1\SortByLength.pdb

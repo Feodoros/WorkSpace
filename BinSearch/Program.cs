@@ -9,8 +9,8 @@ namespace BinSearch
         {
             Console.OutputEncoding = Encoding.UTF8;
             
-            int[,] arrays = { {-15, -12, -9, -2 }, { -1, 0, 4, 8 }, { 9, 15, 18, 22 }};
-            int X = 22;
+            int[,] arrays = { {-15, -12, -9, -2 }, { -1, 0, 4, 8 }, { 9, 15, 18, 22 } };
+            int X = 8;
             
             Print(arrays);
             
@@ -29,6 +29,7 @@ namespace BinSearch
         private static bool Finder_2D(int[,] arrays, int X, out int[] indexI) 
         {
             indexI = new int[] {-1, -1};
+            
             // Тот же бин поиск по массиву, только теперь еще пробегаем каждую строку (массив)
             // Ну и индекс у нас теперь двумерный
             for (int i = 0; i <= arrays.GetUpperBound(0); i++)
@@ -39,7 +40,7 @@ namespace BinSearch
                 
                 while (left <= right)
                 {
-                    mid = (left + right) / 2;
+                    mid = left - (left - right) / 2;
                     if (arrays[i, mid] == X)
                     {
                         indexI[0] = i;

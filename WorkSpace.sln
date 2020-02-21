@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkSpace", "WorkSpace\WorkSpace.csproj", "{BB813141-5127-4C3B-BB11-226E5D201ADC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinSearch", "BinSearch\BinSearch.csproj", "{190DBEE8-63A4-4481-A510-E9F7A7198A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryDeepth", "DirectoryDeepth\DirectoryDeepth.csproj", "{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB813141-5127-4C3B-BB11-226E5D201ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB813141-5127-4C3B-BB11-226E5D201ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB813141-5127-4C3B-BB11-226E5D201ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB813141-5127-4C3B-BB11-226E5D201ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190DBEE8-63A4-4481-A510-E9F7A7198A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190DBEE8-63A4-4481-A510-E9F7A7198A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190DBEE8-63A4-4481-A510-E9F7A7198A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190DBEE8-63A4-4481-A510-E9F7A7198A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryDeepth", "Director
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortByLength", "SortByLength\SortByLength.csproj", "{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cross", "Cross\Cross.csproj", "{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

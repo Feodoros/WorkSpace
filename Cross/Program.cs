@@ -11,12 +11,10 @@ namespace Cross
             string[] words = { "УЛИТКА", "ПОТОК", "ПЛЮЩ", "БУМ", "СМЕХ" };
             string mainWord = "ЛОПУХ";
 
-
             List<char[]> finalTable = MakeTable(words, mainWord);
             Print(finalTable, mainWord);
             Console.ReadKey();
         }
-
 
         static List<char[]> MakeTable (string[] words, string mainWord)
         {
@@ -27,14 +25,10 @@ namespace Cross
             
             for (int i = 0; i < mainWord.Length; i++)
             {
-         
                 int index = words[i].IndexOf(mainWord[i]);
-                
-                if (index == -1)
-                {
-                    Console.WriteLine("Невозможно составить кроссворд.");
-                    Environment.Exit(-1);
-                }
+
+                if (index == -1 || mainWord.Length != words.Length)
+                    ImpossibleMakingCross();
                 
                 indexes[i] = index;
             }
@@ -88,6 +82,12 @@ namespace Cross
                 
                 Console.WriteLine();
             }
+        }
+
+        static void ImpossibleMakingCross()
+        {
+            Console.WriteLine("Невозможно составить кроссворд.");
+            Environment.Exit(-1);
         }
     }
 }

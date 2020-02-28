@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortByLength", "SortByLengt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cross", "Cross\Cross.csproj", "{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordGen", "WordGen\WordGen.csproj", "{39514378-E24C-4DBB-BABD-69B242C389D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39514378-E24C-4DBB-BABD-69B242C389D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39514378-E24C-4DBB-BABD-69B242C389D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39514378-E24C-4DBB-BABD-69B242C389D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39514378-E24C-4DBB-BABD-69B242C389D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

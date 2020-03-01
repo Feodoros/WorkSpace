@@ -1,0 +1,5 @@
+/Users/ketra/Desktop/WS/WorkSpace/BinSearch/bin/Debug/BinSearch.exe
+/Users/ketra/Desktop/WS/WorkSpace/BinSearch/bin/Debug/BinSearch.pdb
+/Users/ketra/Desktop/WS/WorkSpace/BinSearch/obj/anycpu/Debug/BinSearch.csprojAssemblyReference.cache
+/Users/ketra/Desktop/WS/WorkSpace/BinSearch/obj/anycpu/Debug/BinSearch.exe
+/Users/ketra/Desktop/WS/WorkSpace/BinSearch/obj/anycpu/Debug/BinSearch.pdb

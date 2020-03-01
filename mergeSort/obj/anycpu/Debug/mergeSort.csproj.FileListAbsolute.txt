@@ -1,0 +1,4 @@
+/Users/ketra/Desktop/WS/WorkSpace/mergeSort/bin/Debug/mergeSort.exe
+/Users/ketra/Desktop/WS/WorkSpace/mergeSort/bin/Debug/mergeSort.pdb
+/Users/ketra/Desktop/WS/WorkSpace/mergeSort/obj/anycpu/Debug/mergeSort.exe
+/Users/ketra/Desktop/WS/WorkSpace/mergeSort/obj/anycpu/Debug/mergeSort.pdb

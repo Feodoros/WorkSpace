@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinSearch", "BinSearch\BinS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirDepth", "DirDepth\DirDepth.csproj", "{B4C8F2E2-F48F-4CC5-9F18-7E77525C9283}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mergeSort", "mergeSort\mergeSort.csproj", "{9021D6A9-ECC0-4391-8189-C538E4C11488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -19,5 +21,9 @@ Global
 		{B4C8F2E2-F48F-4CC5-9F18-7E77525C9283}.Debug|anycpu.Build.0 = Debug|anycpu
 		{B4C8F2E2-F48F-4CC5-9F18-7E77525C9283}.Release|anycpu.ActiveCfg = Release|anycpu
 		{B4C8F2E2-F48F-4CC5-9F18-7E77525C9283}.Release|anycpu.Build.0 = Release|anycpu
+		{9021D6A9-ECC0-4391-8189-C538E4C11488}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{9021D6A9-ECC0-4391-8189-C538E4C11488}.Debug|anycpu.Build.0 = Debug|anycpu
+		{9021D6A9-ECC0-4391-8189-C538E4C11488}.Release|anycpu.ActiveCfg = Release|anycpu
+		{9021D6A9-ECC0-4391-8189-C538E4C11488}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 EndGlobal

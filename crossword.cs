@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
@@ -20,13 +20,13 @@ namespace crsswrd
 
         public static List<char[]> Crossword(string[] BaseOfWords, string HorizontalWord)
         {
-            int[] indexes = new int[HorizontalWord.Length];
+            int[] indexes = new int[HorizontalWord.Length]; //длина массива - количество букв в главном слове
 
             List<char[]> FinalWords = new List<char[]>();
 
             for (int i = 0; i < HorizontalWord.Length; i++)
             {
-                int index = BaseOfWords[i].IndexOf(HorizontalWord[i]);
+                int index = BaseOfWords[i].IndexOf(HorizontalWord[i]); //находим индекс вхождений буквы из базы слов в главном слове
 
                 if (index == -1 || HorizontalWord.Length != BaseOfWords.Length)
                     ImpossibleMakingCross();
@@ -38,8 +38,8 @@ namespace crsswrd
 
             for (int i = 0; i < BaseOfWords.Length; i++)
             {
-                int NumOfSpaces = max - indexes[i];
-                char[] spaces = new char[NumOfSpaces];
+                int NumOfSpaces = max - indexes[i];//вычисляем индивидуальное количество пробелов для каждого слова
+                char[] spaces = new char[NumOfSpaces];//и делаем массив для кадого количества пробелов
                 for (int j = 0; j < NumOfSpaces; j++)
                 {
                     spaces[j] = ' ';

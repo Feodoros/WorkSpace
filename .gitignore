@@ -1,16 +1,12 @@
-### OSX ###
-# General
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
 Icon
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
+Properties
+bin/Debug
+obj
+.DS_Store
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -18,7 +14,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
+! .cs
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop

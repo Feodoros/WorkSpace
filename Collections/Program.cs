@@ -103,8 +103,82 @@ namespace Collections
 
             foreach (KeyValuePair<string, string> capital in capitals)
             {
-                Console.WriteLine($"{capital.Key} столица {capital.Value}");
+                //Console.WriteLine($"{capital.Key} столица {capital.Value}");
             }
+            
+            
+            // HomeWork
+            // Задача 1.
+            Dictionary<int, int> numbers = CreateDict(5);
+            foreach (var keyValuePair in numbers)
+            {
+                Console.WriteLine($"{keyValuePair.Key} -- {keyValuePair.Value}");
+            }
+            
+            // Задача 2.
+            string s = "( { [ Hello, World! ] }  )";
+            Console.WriteLine(IsBalanced(s));
+            
+            // Задача 3.
+            QueueProcess();
+            
+        }
+
+        static Dictionary<int, int> CreateDict(int N)
+        {
+            Dictionary<int, int> numbers = new Dictionary<int, int>(N);
+            for (int i = 0; i < N; i++)
+            {
+                numbers.Add(i, i*i);
+            }
+            return numbers;
+        }
+        
+        static bool IsBalanced(string s)
+        {    
+            Stack<char> stackBrackets = new Stack<char>();
+                
+            // Все возможные скобки
+            string brackets = "{[(";
+            
+            // Инверсируем все скобки
+            string str = s.Replace(')', '(').Replace(']', '[').Replace('}', '{');
+            
+            // Новая строка, содержащая только открывающие скобки
+            var newString = str.Where(c => brackets.Contains(c));
+
+            foreach (char c in newString)
+            {
+                if (stackBrackets.Count == 0 || stackBrackets.Peek() != c)
+                    stackBrackets.Push(c);
+                else 
+                    stackBrackets.Pop();
+            }
+            
+            return stackBrackets.Count == 0;
+        }
+        
+        static void QueueProcess()
+        {
+            Random r = new Random();
+            Queue<int> queue = new Queue<int>();
+            
+            // Заполняем очередь
+            for (int i = 0; i < 10; i++)
+            {
+                queue.Enqueue(r.Next(1, 99));
+            }
+
+            while (queue.Count != 0 && queue.Peek() % 2 != 0)
+                queue.Dequeue();
+
+            if (queue.Count == 0)
+                Console.WriteLine("Очередь не содержит четных чисел.");
+            else
+                foreach (var queueNumber in queue)
+                {
+                    Console.Write(queueNumber + " ");
+                }
         }
         
         // ДЗ:
@@ -119,6 +193,7 @@ namespace Collections
         //        Количесвто элементов в очереди = 10. Если в очереди нет четных чисел,
         //        то возвращаем запись, что вся очередь обслужена (нет четных элементов).
         
+        
     }
 
     class Person
@@ -131,4 +206,5 @@ namespace Collections
             return this.Name;
         } 
     }
+    
 }

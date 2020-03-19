@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordGen", "WordGen\WordGen.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{E2255E18-05C7-4495-A247-23ECE8511EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCFindSimilar", "PCFindSimilar\PCFindSimilar.csproj", "{69CA6710-A308-4712-8065-37858D48597B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2255E18-05C7-4495-A247-23ECE8511EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2255E18-05C7-4495-A247-23ECE8511EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2255E18-05C7-4495-A247-23ECE8511EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2255E18-05C7-4495-A247-23ECE8511EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CA6710-A308-4712-8065-37858D48597B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69CA6710-A308-4712-8065-37858D48597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69CA6710-A308-4712-8065-37858D48597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69CA6710-A308-4712-8065-37858D48597B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCFindSimilar", "PCFindSimilar\PCFindSimilar.csproj", "{69CA6710-A308-4712-8065-37858D48597B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanoiTowards", "HanoiTowards\HanoiTowards.csproj", "{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{69CA6710-A308-4712-8065-37858D48597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69CA6710-A308-4712-8065-37858D48597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69CA6710-A308-4712-8065-37858D48597B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

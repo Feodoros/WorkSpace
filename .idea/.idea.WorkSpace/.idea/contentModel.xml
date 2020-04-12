@@ -4,6 +4,19 @@
     <e p="C:\Users\Fedor\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Fedor\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_WorkSpace.2009100819.00" t="ExcludeRecursive" />
     <e p="C:\Users\Fedor\RiderProjects\WorkSpace" t="IncludeFlat">
+      <e p="AlgorithmRutishauser" t="IncludeRecursive">
+        <e p="AlgorithmRutishauser.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="AlgorithmRutishauser.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="StructurList.cs" t="Include" />
+      </e>
       <e p="BinSearch" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BinSearch.csproj" t="IncludeRecursive" />
@@ -11,6 +24,18 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="BinSearch.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="Collections" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Collections.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Collections.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -40,6 +65,18 @@
         </e>
         <e p="Program.cs" t="Include" />
       </e>
+      <e p="HanoiTowards" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HanoiTowards.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="HanoiTowards.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="MergeSort" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="MergeSort.csproj" t="IncludeRecursive" />
@@ -53,6 +90,18 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="PCFindSimilar" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PCFindSimilar.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PCFindSimilar.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="SortByLength" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

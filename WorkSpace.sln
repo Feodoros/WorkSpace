@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCFindSimilar", "PCFindSimi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanoiTowards", "HanoiTowards\HanoiTowards.csproj", "{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmRutishauser", "AlgorithmRutishauser\AlgorithmRutishauser.csproj", "{8CA32844-F668-4328-AE40-AFDD9FB7D28B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA32844-F668-4328-AE40-AFDD9FB7D28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA32844-F668-4328-AE40-AFDD9FB7D28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA32844-F668-4328-AE40-AFDD9FB7D28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA32844-F668-4328-AE40-AFDD9FB7D28B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -18,6 +18,7 @@ namespace AlgorithmRutishauser
         public int Lvl { get; set; }
     }
 
+    // Свой список
     public class StructurList<T>
     {
         public T[] data;
@@ -260,11 +261,11 @@ namespace AlgorithmRutishauser
                     res = value1 / value2;
                 }
 
-                list.Remove(num);
-                list.Remove(num + 1);
-                list.Remove(num + 2);
-                list.Remove(num - 1);
-                list.Remove(num - 2);
+                //list.Remove(num);
+                //list.Remove(num + 1);
+                //list.Remove(num + 2);
+               // list.Remove(num - 1);
+               // list.Remove(num - 2);
                 
                 // Индекс скобки (
                 int idx1 = str.IndexOf(element1.PartOfString, StringComparison.Ordinal) - 1;
@@ -272,7 +273,7 @@ namespace AlgorithmRutishauser
                 // Индекс скобки )
                 int idx2 = str.IndexOf(element2.PartOfString, StringComparison.Ordinal) + (element2.PartOfString.Length) + 1;
 
-                string substring = str.Substring(idx1, idx2 - idx1 + 1);
+                string substring = str.Substring(idx1, idx2 - idx1);
 
                 var regex = new Regex(Regex.Escape(substring));
                 str = regex.Replace(str, res.ToString(CultureInfo.InvariantCulture), 1);

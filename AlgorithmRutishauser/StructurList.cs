@@ -18,10 +18,10 @@ namespace AlgorithmRutishauser
     }
 
     // Свой список
-    public class StructurList<T>
+    public class StructurList<T> : IEnumerable<T>
     {
         public T[] data;
-
+        
         public StructurList(T[] data)
         {
             this.data = data;
@@ -118,13 +118,14 @@ namespace AlgorithmRutishauser
             
             data = dataNew;
         }
+
         
     }
 
     public class AlgorithmRutishauser
     {
         // Сканирование строки -- разбиение на partOfString
-        public List<string> ScanString(string str)
+        static public List<string> ScanString(string str)
         {
             char[] digits = new[] {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
             
@@ -157,12 +158,11 @@ namespace AlgorithmRutishauser
                 }
             }
             
-            
             return partsOfString;
         }
 
         // Строим список (часть строки -- уровень)
-        public StructurList<MyStruct> ArithmeticExpression(List<string> partsOfString)
+        static public StructurList<MyStruct> ArithmeticExpression(List<string> partsOfString)
         {
             MyStruct[] data = {};
             
@@ -203,102 +203,31 @@ namespace AlgorithmRutishauser
         // Алгоритм Рутисхаузера
         public string Rutishauser(string str)
         {
+            double n = -1;
+            
+            if (Double.TryParse(str, out n))
+            {
+                return n.ToString(CultureInfo.InvariantCulture);
+            }
+            
             if (!IsBalanced(str))
             {
                 return "Скобочная структура неверна!";
             }
             
-            double n = -1;
-            
-            if (Double.TryParse(str, out n))
+            if (!CheckCorrectStr(str))
             {
-                return n.ToString();
+                return "Ошибка в составлении выражения! (Расположите каждое действие в отдельных скобках)";
             }
-
+            
             else
             {
                 StructurList<MyStruct> list = ArithmeticExpression(ScanString(str));
 
-                // Найдем максимальный уровень
-                int max = 0;
-                foreach (var element in list.data)
-                {
-                    if (element.Lvl > max)
-                    {
-                        max = element.Lvl;
-                    }
-                }
-
-                // Найдем 2 элемента с максимальным уровнем
-                MyStruct element1 = new MyStruct();
-                element1.Lvl = -1;
-                element1.PartOfString = "";
+                list = DeterminateExpression(list);
                 
-                MyStruct element2 = new MyStruct();
-                element1.Lvl = -1;
-                element1.PartOfString = "";
-               
-                int num = 0;
-                foreach (var element in list.data)
-                {
-                    if (element.Lvl == max)
-                    {
-                        if (element1.Lvl == -1)
-                        {
-                            element1 = element;
-                        }
-                        else
-                        {
-                            element2 = element;
-                            break;
-                        }
-                    }
-
-                    num++;
-                }
-
-                // Номер операции (между двумя элементами)
-                num--;
-                string operation = list.data[num].PartOfString;
-
-                // Результат операции
-                double res = 0;
-                double value1 = Double.Parse(element1.PartOfString);
-                double value2 = Double.Parse(element2.PartOfString);
-                if (operation == "+")
-                {
-                    res = value1 + value2;
-                }
-
-                if (operation == "-")
-                {
-                    res = value1 - value2;
-                }
-
-                if (operation == "*")
-                {
-                    res = value1 * value2;
-                }
-
-                if (operation == "/")
-                {
-                    res = value1 / value2;
-                }
-
-                list.Remove(num - 2);
-                list.Remove(num - 2);
-                list.Remove(num - 2);
-                list.Remove(num - 2);
-                list.Remove(num - 2);
-                
-                MyStruct newRes = new MyStruct();
-                newRes.PartOfString = res.ToString(CultureInfo.InvariantCulture);
-                newRes.Lvl = max - 1;
-                
-                list.Add(newRes, num - 2);
-
                 str = "";
-                foreach (var element in list.data)
+                foreach (var element in list)
                 {
                     str += element.PartOfString;
                 }
@@ -308,6 +237,85 @@ namespace AlgorithmRutishauser
 
         }
         
+        // Вычислить значение к скобках
+        static StructurList<MyStruct> DeterminateExpression(StructurList<MyStruct> list)
+        {
+            // Найдем 2 элемента с максимальным уровнем
+            int max = GetMaxLvl(list);
+            
+            MyStruct element1 = new MyStruct();
+            element1.Lvl = -1;
+            element1.PartOfString = "";
+            
+            MyStruct element2 = new MyStruct();
+            element1.Lvl = -1;
+            element1.PartOfString = "";
+
+            int num = 0;
+            
+            foreach (var element in list)
+            {
+                if (element.Lvl == max)
+                {
+                    if (element1.Lvl == -1)
+                    {
+                        element1 = element;
+                    }
+                    else
+                    {
+                        element2 = element;
+                        break;
+                    }
+                }
+
+                num++;
+            }
+
+            // Номер операции (между двумя элементами)
+            num--;
+            string operation = list.data[num].PartOfString;
+
+            // Результат операции
+            double res = 0;
+            double value1 = Double.Parse(element1.PartOfString);
+            double value2 = Double.Parse(element2.PartOfString);
+            
+            if (operation == "+")
+            {
+                res = value1 + value2;
+            }
+
+            if (operation == "-")
+            {
+                res = value1 - value2;
+            }
+
+            if (operation == "*")
+            {
+                res = value1 * value2;
+            }
+
+            if (operation == "/")
+            {
+                res = value1 / value2;
+            }
+
+            list.Remove(num - 2);
+            list.Remove(num - 2);
+            list.Remove(num - 2);
+            list.Remove(num - 2);
+            list.Remove(num - 2);
+            
+            MyStruct newRes = new MyStruct();
+            newRes.PartOfString = res.ToString(CultureInfo.InvariantCulture);
+            newRes.Lvl = max - 1;
+            
+            list.Add(newRes, num - 2);
+
+            return list;
+        }
+        
+        // Проверка скобочной структуры
         static bool IsBalanced(string s)
         {    
             Stack<char> stackBrackets = new Stack<char>();
@@ -332,6 +340,35 @@ namespace AlgorithmRutishauser
             return stackBrackets.Count == 0;
         }
 
+        // Проверка, что ровно 2 элемента с макс уровнем
+        static bool CheckCorrectStr(string str)
+        {
+            StructurList<MyStruct> list = ArithmeticExpression(ScanString(str));
+            int max = GetMaxLvl(list);
+            int count = 0;
+            foreach (var element in list.data)
+            {
+                if (element.Lvl == max)
+                    count++;
+            }
+
+            return count == 2;
+        }
+
+        // Найдем максимальный уровень
+        static int GetMaxLvl( StructurList<MyStruct> list)
+        {
+            int max = 0;
+            foreach (var element in list.data)
+            {
+                if (element.Lvl > max)
+                {
+                    max = element.Lvl;
+                }
+            }
+
+            return max;
+        }
     }
 
 

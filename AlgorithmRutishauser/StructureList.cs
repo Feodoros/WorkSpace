@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics.SymbolStore;
 using System.Globalization;
 using System.Linq;
-using System.Net.Sockets;
-using System.Text.RegularExpressions;
 
 namespace AlgorithmRutishauser
 {
@@ -18,25 +14,25 @@ namespace AlgorithmRutishauser
     }
 
     // Свой список
-    public class StructurList<T> : IEnumerable<T>
+    public class StructureList<T> : IEnumerable<T>
     {
-        public T[] data;
+        public T[] Data;
         
-        public StructurList(T[] data)
+        public StructureList(T[] data)
         {
-            this.data = data;
+            this.Data = data;
         }
         
         // индексатор
         public T this[int index]
         {
-            get => data[index];
-            set => data[index] = value;
+            get => Data[index];
+            set => Data[index] = value;
         }
 
         public int Count()
         {
-            return data.Length;
+            return Data.Length;
         }
         
         // Добавление (в конец или на позицию)
@@ -48,12 +44,12 @@ namespace AlgorithmRutishauser
             {
                 for (int i = 0; i < n; i++)
                 {
-                    dataNew[i] = data[i];
+                    dataNew[i] = Data[i];
                 }
 
                 dataNew[n] = element;
 
-                data = dataNew;
+                Data = dataNew;
             }
             else
             {
@@ -62,7 +58,7 @@ namespace AlgorithmRutishauser
                 {
                     if (idx != i && flag)
                     {
-                        dataNew[i] = data[i];
+                        dataNew[i] = Data[i];
                     }
                     else
                     {
@@ -73,14 +69,14 @@ namespace AlgorithmRutishauser
                         }
                         else
                         {
-                            dataNew[i] = data[i-1];
+                            dataNew[i] = Data[i-1];
                         }
                     }
                 }
                 
             }
 
-            data = dataNew;
+            Data = dataNew;
         }
         
         // Удаление элемента
@@ -95,7 +91,7 @@ namespace AlgorithmRutishauser
             {
                 for (int i = 0; i < n - 1; i++)
                 {
-                    dataNew[i] = data[i];
+                    dataNew[i] = Data[i];
                 }
             }
 
@@ -105,23 +101,23 @@ namespace AlgorithmRutishauser
                 {
                     if (index != i && flag)
                     {
-                        dataNew[i] = data[i];
+                        dataNew[i] = Data[i];
                     }
 
                     else
                     {
                         flag = false;
-                        dataNew[i] = data[i + 1];
+                        dataNew[i] = Data[i + 1];
                     }
                 }
             }
             
-            data = dataNew;
+            Data = dataNew;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            T current = data[0];
+            T current = Data[0];
             int i = 0;
             
             // ReSharper disable once PossibleNullReferenceException
@@ -130,7 +126,7 @@ namespace AlgorithmRutishauser
                 yield return current;
                 if(i + 1 != Count())
                 {
-                    current = data[i+1];
+                    current = Data[i+1];
                     i++;
                 }
                 else
@@ -145,86 +141,10 @@ namespace AlgorithmRutishauser
         }
     }
 
-    public class AlgorithmRutishauser
+    public static class AlgorithmRutishauser
     {
-        // Сканирование строки -- разбиение на partOfString
-        static public List<string> ScanString(string str)
-        {
-            char[] digits = new[] {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-            
-            List<string> partsOfString = new List<string>();
-            str = str.Replace(',', '.');
-            str = str.Replace( " ", string.Empty);
-            
-            for (int i = 0; i < str.Length; i++)
-            {
-                
-                char element = str[i];
-                
-                if (str[i] == '+' || str[i] == '-' || str[i] == '*' || 
-                    str[i] == '/' || str[i] == '(' || str[i] == ')' )
-                {
-                    partsOfString.Add(str[i].ToString());
-                }
-                
-                if (digits.Contains(str[i]))
-                {
-                    string number = "";
-                    while (digits.Contains(str[i]) || str[i] == '.')
-                    {
-                        number += str[i];
-                        i++;
-                    }
-
-                    i--;
-                    partsOfString.Add(number);
-                }
-            }
-            
-            return partsOfString;
-        }
-
-        // Строим список (часть строки -- уровень)
-        static public StructurList<MyStruct> ArithmeticExpression(List<string> partsOfString)
-        {
-            MyStruct[] data = {};
-            
-            StructurList<MyStruct> list = new StructurList<MyStruct>(data);
-
-            int lvl = 0;
-            double n;
-            
-            foreach (var partOfString in partsOfString)
-            {
-                if (partOfString == "("  || Double.TryParse(partOfString, out n))
-                {
-                    lvl++;
-                    MyStruct myObject = new MyStruct();
-                    myObject.Lvl = lvl;
-                    myObject.PartOfString = partOfString;
-                    
-                    list.Add(myObject);
-                }
-
-                if (partOfString == ")" || partOfString == "+" ||
-                    partOfString == "-" || partOfString == "*" ||
-                    partOfString == "/")
-                {
-                    lvl--;
-                    MyStruct myObject = new MyStruct();
-                    myObject.Lvl = lvl;
-                    myObject.PartOfString = partOfString;
-                    list.Add(myObject);
-                }
-                
-            }
-
-            return list;
-
-        }
-
         // Алгоритм Рутисхаузера
-        public string Rutishauser(string str)
+        public static string Rutishauser(string str)
         {
             double n = -1;
             
@@ -245,7 +165,7 @@ namespace AlgorithmRutishauser
             
             else
             {
-                StructurList<MyStruct> list = ArithmeticExpression(ScanString(str));
+                StructureList<MyStruct> list = ScanArithmeticExpression(str);
 
                 list = DeterminateExpression(list);
                 
@@ -254,14 +174,77 @@ namespace AlgorithmRutishauser
                 {
                     str += element.PartOfString;
                 }
-                
+
+                str = str.Replace('.', ',');
                 return Rutishauser(str);
             }
 
         }
+
+        #region Helpers
+
+        // Строим список [partOfString -- Lvl]
+        static StructureList<MyStruct> ScanArithmeticExpression(string str)
+        {
+            char[] digits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+            str = str.Replace('.', ',');
+            str = str.Replace( " ", string.Empty);
+            
+            MyStruct[] data = {};
+            StructureList<MyStruct> list = new StructureList<MyStruct>(data);
+            int lvl = 0;
+            
+            for (int i = 0; i < str.Length; i++)
+            {
+                if(str[i] == '(')
+                {
+                    lvl++;
+                    list.Add(new MyStruct { PartOfString = str[i].ToString(), Lvl = lvl});
+                }
+                
+                if (digits.Contains(str[i]))
+                {
+                    string number = "";
+                    while (digits.Contains(str[i]) || str[i] == ',')
+                    {
+                        number += str[i];
+                        i++;
+                    }
+
+                    i--;
+                    
+                    lvl++;
+                    list.Add(new MyStruct { PartOfString = number, Lvl = lvl});
+                }
+
+                if (str[i] == '+' || str[i] == '-' || str[i] == '*' ||
+                    str[i] == '/' || str[i] == ')')
+                {
+                    lvl--;
+                    list.Add(new MyStruct { PartOfString = str[i].ToString(), Lvl = lvl});
+                }
+            }
+
+            return list;
+        }
+        
+        // Найдем максимальный уровень
+        static int GetMaxLvl(StructureList<MyStruct> list)
+        {
+            int max = 0;
+            foreach (var element in list.Data)
+            {
+                if (element.Lvl > max)
+                {
+                    max = element.Lvl;
+                }
+            }
+
+            return max;
+        }
         
         // Вычислить значение к скобках
-        static StructurList<MyStruct> DeterminateExpression(StructurList<MyStruct> list)
+        static StructureList<MyStruct> DeterminateExpression(StructureList<MyStruct> list)
         {
             // Найдем 2 элемента с максимальным уровнем
             int max = GetMaxLvl(list);
@@ -296,7 +279,7 @@ namespace AlgorithmRutishauser
 
             // Номер операции (между двумя элементами)
             num--;
-            string operation = list.data[num].PartOfString;
+            string operation = list.Data[num].PartOfString;
 
             // Результат операции
             double res = 0;
@@ -320,7 +303,7 @@ namespace AlgorithmRutishauser
 
             if (operation == "/")
             {
-                res = value1 / value2;
+                res = Math.Round(value1 / value2, 3);
             }
 
             list.Remove(num - 2);
@@ -328,15 +311,17 @@ namespace AlgorithmRutishauser
             list.Remove(num - 2);
             list.Remove(num - 2);
             list.Remove(num - 2);
-            
-            MyStruct newRes = new MyStruct();
-            newRes.PartOfString = res.ToString(CultureInfo.InvariantCulture);
-            newRes.Lvl = max - 1;
-            
+
+            MyStruct newRes = new MyStruct {PartOfString = res.ToString(CultureInfo.InvariantCulture), Lvl = max - 1};
+
             list.Add(newRes, num - 2);
 
             return list;
         }
+
+        #endregion
+        
+        #region Errors
         
         // Проверка скобочной структуры
         static bool IsBalanced(string s)
@@ -366,10 +351,10 @@ namespace AlgorithmRutishauser
         // Проверка, что ровно 2 элемента с макс уровнем
         static bool CheckCorrectStr(string str)
         {
-            StructurList<MyStruct> list = ArithmeticExpression(ScanString(str));
+            StructureList<MyStruct> list = ScanArithmeticExpression(str);
             int max = GetMaxLvl(list);
             int count = 0;
-            foreach (var element in list.data)
+            foreach (var element in list.Data)
             {
                 if (element.Lvl == max)
                     count++;
@@ -377,22 +362,7 @@ namespace AlgorithmRutishauser
 
             return count == 2;
         }
-
-        // Найдем максимальный уровень
-        static int GetMaxLvl( StructurList<MyStruct> list)
-        {
-            int max = 0;
-            foreach (var element in list.data)
-            {
-                if (element.Lvl > max)
-                {
-                    max = element.Lvl;
-                }
-            }
-
-            return max;
-        }
+        
+        #endregion
     }
-
-
 }

@@ -12,17 +12,15 @@ namespace AlgorithmRutishauser
         {
             
             //MyStruct[] y = {};
-            int[] y = new[] {1, 2, 3};
-            StructurList<int> x = new StructurList<int>(y);
+            
+            //StructurList<MyStruct> x = new StructurList<MyStruct>(y);
             
             AlgorithmRutishauser t = new AlgorithmRutishauser();
             
-            x.Add(4, 1);
-            x.Remove(2);
             
-            string res = t.Rutishauser("((7*(43+99))+(35+24))");
+            string res = t.Rutishauser("(1 + ((2 + ((12 - 3) * 5)))");
             
-            Console.WriteLine(x);
+            Console.WriteLine(res);
         }
         
         

@@ -119,7 +119,6 @@ namespace AlgorithmRutishauser
             data = dataNew;
         }
         
-
     }
 
     public class AlgorithmRutishauser
@@ -201,8 +200,14 @@ namespace AlgorithmRutishauser
 
         }
 
+        // Алгоритм Рутисхаузера
         public string Rutishauser(string str)
         {
+            if (!IsBalanced(str))
+            {
+                return "Скобочная структура неверна!";
+            }
+            
             double n = -1;
             
             if (Double.TryParse(str, out n))
@@ -280,26 +285,51 @@ namespace AlgorithmRutishauser
                     res = value1 / value2;
                 }
 
-                list.Remove(num);
-                //list.Remove(num + 1);
-                //list.Remove(num + 2);
-               // list.Remove(num - 1);
-               // list.Remove(num - 2);
+                list.Remove(num - 2);
+                list.Remove(num - 2);
+                list.Remove(num - 2);
+                list.Remove(num - 2);
+                list.Remove(num - 2);
                 
-                // Индекс скобки (
-                int idx1 = str.IndexOf(element1.PartOfString, StringComparison.Ordinal) - 1;
+                MyStruct newRes = new MyStruct();
+                newRes.PartOfString = res.ToString(CultureInfo.InvariantCulture);
+                newRes.Lvl = max - 1;
+                
+                list.Add(newRes, num - 2);
 
-                // Индекс скобки )
-                int idx2 = str.IndexOf(element2.PartOfString, StringComparison.Ordinal) + (element2.PartOfString.Length) + 1;
-
-                string substring = str.Substring(idx1, idx2 - idx1);
-
-                var regex = new Regex(Regex.Escape(substring));
-                str = regex.Replace(str, res.ToString(CultureInfo.InvariantCulture), 1);
-
+                str = "";
+                foreach (var element in list.data)
+                {
+                    str += element.PartOfString;
+                }
+                
                 return Rutishauser(str);
             }
 
+        }
+        
+        static bool IsBalanced(string s)
+        {    
+            Stack<char> stackBrackets = new Stack<char>();
+                
+            // Все возможные скобки
+            string brackets = "{[(";
+            
+            // Инверсируем все скобки
+            string str = s.Replace(')', '(').Replace(']', '[').Replace('}', '{');
+            
+            // Новая строка, содержащая только открывающие скобки
+            var newString = str.Where(c => brackets.Contains(c));
+
+            foreach (char c in newString)
+            {
+                if (stackBrackets.Count == 0 || stackBrackets.Peek() != c)
+                    stackBrackets.Push(c);
+                else 
+                    stackBrackets.Pop();
+            }
+            
+            return stackBrackets.Count == 0;
         }
 
     }

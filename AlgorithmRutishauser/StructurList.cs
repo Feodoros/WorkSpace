@@ -119,7 +119,30 @@ namespace AlgorithmRutishauser
             data = dataNew;
         }
 
-        
+        public IEnumerator<T> GetEnumerator()
+        {
+            T current = data[0];
+            int i = 0;
+            
+            // ReSharper disable once PossibleNullReferenceException
+            while (!default(T).Equals(current))
+            { 
+                yield return current;
+                if(i + 1 != Count())
+                {
+                    current = data[i+1];
+                    i++;
+                }
+                else
+                {
+                    current = default(T);
+                }
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable)this).GetEnumerator();
+        }
     }
 
     public class AlgorithmRutishauser

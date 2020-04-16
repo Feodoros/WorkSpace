@@ -39,20 +39,50 @@ namespace AlgorithmRutishauser
             return data.Length;
         }
         
-        public void Add(T element)
+        // Добавление (в конец или на позицию)
+        public void Add(T element, int idx = -1)
         {
             int n = Count();
             T[] dataNew= new T[n + 1];
-            for (int i = 0; i < n; i++)
+            if(idx == -1)
             {
-                dataNew[i] = data[i];
-            }
+                for (int i = 0; i < n; i++)
+                {
+                    dataNew[i] = data[i];
+                }
 
-            dataNew[n] = element;
+                dataNew[n] = element;
+
+                data = dataNew;
+            }
+            else
+            {
+                bool flag = true;
+                for (int i = 0; i < n + 1; i++)
+                {
+                    if (idx != i && flag)
+                    {
+                        dataNew[i] = data[i];
+                    }
+                    else
+                    {
+                        if (flag)
+                        {
+                            flag = false;
+                            dataNew[i] = element;
+                        }
+                        else
+                        {
+                            dataNew[i] = data[i-1];
+                        }
+                    }
+                }
+                
+            }
 
             data = dataNew;
         }
-
+        
         // Удаление элемента
         public void Remove(int index)
         {

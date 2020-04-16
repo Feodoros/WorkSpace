@@ -17,7 +17,7 @@ namespace AlgorithmRutishauser
             
             AlgorithmRutishauser t = new AlgorithmRutishauser();
             
-            x.Add(4);
+            x.Add(4, 1);
             x.Remove(2);
             
             string res = t.Rutishauser("((7*(43+99))+(35+24))");

@@ -11,10 +11,9 @@ using System.Text.RegularExpressions;
 namespace AlgorithmRutishauser
 {
     // Тип данных
-    public class MyStruct
+    public struct MyStruct
     {
         public string PartOfString { get; set; }
-
         public int Lvl { get; set; }
     }
 
@@ -54,11 +53,14 @@ namespace AlgorithmRutishauser
             data = dataNew;
         }
 
+        // Удаление элемента
         public void Remove(int index)
         {
             int n = Count();
-            T[] dataNew = new T[n];
+            T[] dataNew = new T[n-1];
 
+            bool flag = true;
+            
             if (index == n - 1)
             {
                 for (int i = 0; i < n - 1; i++)
@@ -69,35 +71,22 @@ namespace AlgorithmRutishauser
 
             else
             {
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < n-1; i++)
                 {
-                    if (index != i)
+                    if (index != i && flag)
                     {
                         dataNew[i] = data[i];
+                    }
+
+                    else
+                    {
+                        flag = false;
+                        dataNew[i] = data[i + 1];
                     }
                 }
             }
             
-            T[] dataNew1 = new T[n-1];
-            bool flag = true;
-            for (int i = 0; i < n - 1; i++)
-            {
-                if (dataNew[i] != null && flag) 
-                {
-                    dataNew1[i] = dataNew[i];
-                }
-                else
-                {
-                    flag = false;
-                }
-
-                if (!flag)
-                {
-                    dataNew1[i] = dataNew[i + 1];
-                }
-            }
-            
-            data = dataNew1;
+            data = dataNew;
         }
         
 
@@ -261,7 +250,7 @@ namespace AlgorithmRutishauser
                     res = value1 / value2;
                 }
 
-                //list.Remove(num);
+                list.Remove(num);
                 //list.Remove(num + 1);
                 //list.Remove(num + 2);
                // list.Remove(num - 1);

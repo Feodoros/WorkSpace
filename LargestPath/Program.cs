@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 namespace LargestPath
 {
@@ -8,24 +9,20 @@ namespace LargestPath
     {
         static void Main(string[] args)
         {
-            int[,] matrix = new int[,] 
+            int[,] matrix = new int[,]
             {
-                {2, 5, 1, 10},
+                {2, 5, 1, 0},
                 {3, 3, 1, 9},
                 {4, 4, 7, 8}
             };
+            
+            List<(int,int)> maxPathInMatrix = SearchMaxPathInMatrix(matrix);
 
-            var x = SuitableNeighbours(matrix, 0, 0);
-            
-            List<List<(int, int)>> m = new List<List<(int, int)>>();
-            List<(int, int)> y = new List<(int, int)>(); 
-            var z = SearchMaxPathInMatrix(matrix);
-            
-            Console.WriteLine();
+            OutputResult(matrix, maxPathInMatrix);
         }
 
         // Поиск максимального пути
-        public static List<(int x, int y)> SearchMaxPathInMatrix(int[,] matrix)
+        private static List<(int x, int y)> SearchMaxPathInMatrix(int[,] matrix)
         {
             // Максимальный путь
             List<(int x, int y)> largestPath = new List<(int x, int y)>();
@@ -49,6 +46,11 @@ namespace LargestPath
         // Максимальный путь из вершины
         private static List<(int x, int y)> SearchMaxPath(int[,] matrix, int i, int j, List<(int x, int y)> path, List<List<(int x, int y)>> paths)
         {
+            if (path.Count == 0)
+            {
+                path.Add((i, j));
+            }
+            
             // Подходящте соседи
             List<(int x, int y)> neighbours = SuitableNeighbours(matrix, i, j);
             
@@ -62,11 +64,6 @@ namespace LargestPath
             {
                 foreach (var neighbour in neighbours)
                 {
-                    if (path.Count == 0)
-                    {
-                        path.Add((i, j));
-                    }
-                    
                     path.Add(neighbour);
                     SearchMaxPath(matrix, neighbour.x, neighbour.y, path, paths);
                     path.Remove(neighbour);
@@ -76,7 +73,6 @@ namespace LargestPath
             return paths.OrderByDescending(path => path.Count).First();
         }
         
-
         // Список подходящих соседей
         private static List<(int x, int y)> SuitableNeighbours(int[,] matrix, int x, int y)
         {
@@ -140,5 +136,33 @@ namespace LargestPath
             
         }
         
+        
+        // Вывод результата
+        private static void OutputResult(int[,] matrix, List<(int, int)> largestPath)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("Маршрут по ячейкам: ");
+            foreach (var element in largestPath)
+            {
+                Console.Write(element);
+                if (element != largestPath.Last())
+                {
+                    Console.Write("-");
+                }
+               
+            }
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write("Маршрут по значениям: ");
+            foreach (var element in largestPath)
+            {
+                Console.Write(matrix[element.Item1, element.Item2]);
+                if (element != largestPath.Last())
+                {
+                    Console.Write("-");
+                }
+            }
+        } 
     }
 }

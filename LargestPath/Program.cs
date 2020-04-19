@@ -10,7 +10,7 @@ namespace LargestPath
         {
             int[,] matrix = new int[,] 
             {
-                {2, 5, 1, 0},
+                {2, 5, 1, 10},
                 {3, 3, 1, 9},
                 {4, 4, 7, 8}
             };
@@ -19,32 +19,30 @@ namespace LargestPath
             
             List<List<(int, int)>> m = new List<List<(int, int)>>();
             List<(int, int)> y = new List<(int, int)>(); 
-            var z = SearchMaxPath(matrix, 1, 2, y, m);
+            var z = SearchMaxPathInMatrix(matrix);
             
             Console.WriteLine();
         }
 
         // Поиск максимального пути
-        public static List<(int x, int y)> SearchMaxPath(int[,] matrix)
+        public static List<(int x, int y)> SearchMaxPathInMatrix(int[,] matrix)
         {
-            // Список обойденных вершин, которые образуют максимальный путь
+            // Максимальный путь
             List<(int x, int y)> largestPath = new List<(int x, int y)>();
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    // Подходящте соседи
-                    List<(int x, int y)> neighbours = SuitableNeighbours(matrix, i, j);
-                    foreach (var neighbour in neighbours)
+                    List<(int, int)> maxPathFromNode = SearchMaxPath(matrix, i, j, new List<(int x, int y)>(),
+                        new List<List<(int x, int y)>>());
+                    if (maxPathFromNode.Count > (largestPath.Count))
                     {
-                        
+                        largestPath = maxPathFromNode;
                     }
                 }
             }
             
-
-
             return largestPath;
         }
         

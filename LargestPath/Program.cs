@@ -16,13 +16,12 @@ namespace LargestPath
                 {4, 4, 7, 8}
             };
             
-            List<(int,int)> maxPathInMatrix = SearchMaxPathInMatrix(matrix);
-
+            List<(int,int)> maxPathInMatrix = SearchMaxPath(matrix);
             OutputResult(matrix, maxPathInMatrix);
         }
 
         // Поиск максимального пути
-        private static List<(int x, int y)> SearchMaxPathInMatrix(int[,] matrix)
+        private static List<(int x, int y)> SearchMaxPath(int[,] matrix)
         {
             // Максимальный путь
             List<(int x, int y)> largestPath = new List<(int x, int y)>();
@@ -31,7 +30,7 @@ namespace LargestPath
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    List<(int, int)> maxPathFromNode = SearchMaxPath(matrix, i, j, new List<(int x, int y)>(),
+                    List<(int, int)> maxPathFromNode = SearchMaxPathFromNode(matrix, i, j, new List<(int x, int y)>(),
                         new List<List<(int x, int y)>>());
                     if (maxPathFromNode.Count > (largestPath.Count))
                     {
@@ -44,7 +43,7 @@ namespace LargestPath
         }
         
         // Максимальный путь из вершины
-        private static List<(int x, int y)> SearchMaxPath(int[,] matrix, int i, int j, List<(int x, int y)> path, List<List<(int x, int y)>> paths)
+        private static List<(int x, int y)> SearchMaxPathFromNode(int[,] matrix, int i, int j, List<(int x, int y)> path, List<List<(int x, int y)>> paths)
         {
             if (path.Count == 0)
             {
@@ -52,7 +51,7 @@ namespace LargestPath
             }
             
             // Подходящте соседи
-            List<(int x, int y)> neighbours = SuitableNeighbours(matrix, i, j);
+            List<(int x, int y)> neighbours = GetSuitableNeighbours(matrix, i, j);
             
             // Добавялем путь, если нет соседей
             if (neighbours.Count == 0)
@@ -65,7 +64,7 @@ namespace LargestPath
                 foreach (var neighbour in neighbours)
                 {
                     path.Add(neighbour);
-                    SearchMaxPath(matrix, neighbour.x, neighbour.y, path, paths);
+                    SearchMaxPathFromNode(matrix, neighbour.x, neighbour.y, path, paths);
                     path.Remove(neighbour);
                 }
             }
@@ -74,7 +73,7 @@ namespace LargestPath
         }
         
         // Список подходящих соседей
-        private static List<(int x, int y)> SuitableNeighbours(int[,] matrix, int x, int y)
+        private static List<(int x, int y)> GetSuitableNeighbours(int[,] matrix, int x, int y)
         {
             List<(int x, int y)> neighbours = new List<(int x, int y)>();
 
@@ -133,9 +132,7 @@ namespace LargestPath
                 return false;
                 
             }
-            
         }
-        
         
         // Вывод результата
         private static void OutputResult(int[,] matrix, List<(int, int)> largestPath)

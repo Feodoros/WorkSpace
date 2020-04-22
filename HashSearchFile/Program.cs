@@ -9,26 +9,39 @@ namespace HashSearchFile
     {
         static void Main(string[] args)
         {
-           var s =  @"C:\Users\Fedor\Desktop\Test";
-
-           int[] s1 = new[] {1, 2, 3, 4};
-           int[] s2 = new[] {5, 6, 7, 8};
-           int[] res = s1.Concat(s2).ToArray();
+           var s =  @"C:\Users\Fedor\Desktop\Test"; 
+           
            // Имя файла по пути
            //var x = Path.GetFileName();
            
            // Все файлы
            var y = GetAllFiles(s);
-           
-           
+
+           var z = CreatHashTable(y);
            
            Console.WriteLine(s);
+        }
+
+        // Строим словарь hashCode : список файлов
+        public static Dictionary<byte, List<string>> HashDict(List<string>[] hashTable)
+        {
+            Dictionary<byte, List<string>> dict = new Dictionary<byte, List<string>>();
+            
+            for (int i = 0; i < hashTable.Length; i++)
+            {
+                if (hashTable[i] != null)
+                {
+                    dict[(byte)i] = hashTable[i];
+                }
+            }
+
+            return dict;
         }
 
         // Строим хэш-таблицу файлов
         public static List<string>[] CreatHashTable(string[] files)
         {
-            List<string>[] hashTable = new List<string>[]{};
+            List<string>[] hashTable = new List<string>[256];
             foreach (var file in files)
             {
                 // Имя файла
@@ -40,17 +53,15 @@ namespace HashSearchFile
                     hashTable[hashCode].Add(file);
                 }
                 catch (Exception e)
-                {
-                   List<string> newList = new List<string>();
-                   newList.Add(file);
-                   hashTable[hashCode] = newList;
+                { 
+                    hashTable[hashCode] = new List<string>();
+                    hashTable[hashCode].Add(file);
                 }
 
             }
 
             return hashTable;
         }
-        
         
         // Получаем хэш-код от имени файла
         public static byte GetHash(string fileName)

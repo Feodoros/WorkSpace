@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace HashSearchFile
 {
@@ -7,9 +9,20 @@ namespace HashSearchFile
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           var s =  GetFilesFromDirectory(@"C:\Users\Fedor\Desktop\Test");
+
+           
+           // Имя файла по пути
+           var x = Path.GetFileName(s.First());
+           
+           
+           Console.WriteLine(s);
+        }
+        
+        // Получаем пути файлов в одной папке
+        public static string[] GetFilesFromDirectory(string path)
+        {
+            return Directory.GetFiles(path);
         }
     }
-    
-    
 }

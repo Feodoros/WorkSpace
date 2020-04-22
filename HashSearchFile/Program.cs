@@ -24,6 +24,33 @@ namespace HashSearchFile
            
            Console.WriteLine(s);
         }
+
+        // Строим хэш-таблицу файлов
+        public static List<string>[] CreatHashTable(string[] files)
+        {
+            List<string>[] hashTable = new List<string>[]{};
+            foreach (var file in files)
+            {
+                // Имя файла
+                string fileName = Path.GetFileName(file).ToLower();
+                byte hashCode = GetHash(fileName);
+
+                try
+                {
+                    hashTable[hashCode].Add(file);
+                }
+                catch (Exception e)
+                {
+                   List<string> newList = new List<string>();
+                   newList.Add(file);
+                   hashTable[hashCode] = newList;
+                }
+
+            }
+
+            return hashTable;
+        }
+        
         
         // Получаем хэш-код от имени файла
         public static byte GetHash(string fileName)

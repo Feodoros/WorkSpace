@@ -24,14 +24,6 @@ namespace HashSearchFile
            
            Console.WriteLine(s);
         }
-
-        public static byte GetHashCode(string strFile)
-        {
-            uint num = 0;
-            for (int index = 0; index < strFile.Length; ++index)
-                num += strFile[index];
-            return (byte)(num % 256U);
-        }
         
         // Получаем хэш-код от имени файла
         public static byte GetHash(string fileName)

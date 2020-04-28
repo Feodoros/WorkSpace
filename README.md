@@ -14,16 +14,6 @@
 *  <a href="#Word generator">Word generator</a> 
 </p>
 
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#description">Description</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#creators">Creators</a> •
-  <a href="#creating-history">Creating history</a>
-</p>
-
-
 # [Algorithm Rutishauser](https://github.com/Feodoros/WorkSpace/blob/master/AlgorithmRutishauser/StructureList.cs)
 
 Feature: full bracket structure of the expression. Example:
@@ -52,8 +42,8 @@ The algorithm consists of the following steps:
 In addition, we implemented our list based on an array. It has: indices, count, add (in any place), remove, etc.
 
 # [Binary search](https://github.com/Feodoros/WorkSpace/blob/master/BinSearch/Program.cs)
-Search the coordinates of an element in 2d array.
 ![](https://sun9-15.userapi.com/c857320/v857320109/180096/002vsj8buk8.jpg)
+Search the coordinates of an element in 2d array.
 
 We have a sorted array from smallest to largest. We find the middle of the line of the array and compare the element arr [i, mid] with X ( i - number of line in the array). If they match, the problem is solved. if not, then we increase or decrease the right and left borders depending on whether our element is smaller or greater than X.
 

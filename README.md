@@ -1,19 +1,27 @@
 # Work Space
 ### Content
 </p>
-###### *  <a href="#Algorithm Rutishauser">Algorithm Rutishauser</a> 
-###### *  <a href="#Binary search">Binary search</a> 
-###### *  <a href="#Crossword">Crossword</a> 
-###### *  <a href="#Directory depth">Directory depth</a> 
-###### *  <a href="#FindSimilar">FindSimilar</a> 
-###### *  <a href="#Generic Collections">Generic Collections</a> 
-###### *  <a href="#HashSearchFile">HashSearchFile</a> 
-###### *  <a href="#Largest path">Largest path</a> 
-###### *  <a href="#Sort by length">Sort by length</a> 
-###### *  <a href="#Tower of Hanoi">Tower of Hanoi</a> 
-###### *  <a href="#Word generator">Word generator</a> 
+*  <a href="#Algorithm Rutishauser">Algorithm Rutishauser</a> 
+*  <a href="#Binary search">Binary search</a> 
+*  <a href="#Crossword">Crossword</a> 
+*  <a href="#Directory depth">Directory depth</a> 
+*  <a href="#FindSimilar">FindSimilar</a> 
+*  <a href="#Generic Collections">Generic Collections</a> 
+*  <a href="#HashSearchFile">HashSearchFile</a> 
+*  <a href="#Largest path">Largest path</a> 
+*  <a href="#Sort by length">Sort by length</a> 
+*  <a href="#Tower of Hanoi">Tower of Hanoi</a> 
+*  <a href="#Word generator">Word generator</a> 
 </p>
 
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#description">Description</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#creators">Creators</a> •
+  <a href="#creating-history">Creating history</a>
+</p>
 
 
 # [Algorithm Rutishauser](https://github.com/Feodoros/WorkSpace/blob/master/AlgorithmRutishauser/StructureList.cs)

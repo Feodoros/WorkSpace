@@ -3,7 +3,7 @@
 </p>
 ###### *  <a href="#Algorithm Rutishauser">Algorithm Rutishauser</a> 
 ###### *  <a href="#Binary search">Binary search</a> 
-###### *  <a href="#Crossword">Crosswordi</a> 
+###### *  <a href="#Crossword">Crossword</a> 
 ###### *  <a href="#Directory depth">Directory depth</a> 
 ###### *  <a href="#FindSimilar">FindSimilar</a> 
 ###### *  <a href="#Generic Collections">Generic Collections</a> 

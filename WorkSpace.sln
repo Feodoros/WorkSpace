@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestPath", "LargestPath\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSearchFile", "HashSearchFile\HashSearchFile.csproj", "{717AFA70-88BF-45BD-BCB5-3599B2879ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTown", "HashTown\HashTown.csproj", "{83394D88-66E2-425D-813C-8975BBE5BF38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{717AFA70-88BF-45BD-BCB5-3599B2879ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{717AFA70-88BF-45BD-BCB5-3599B2879ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{717AFA70-88BF-45BD-BCB5-3599B2879ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83394D88-66E2-425D-813C-8975BBE5BF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83394D88-66E2-425D-813C-8975BBE5BF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83394D88-66E2-425D-813C-8975BBE5BF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83394D88-66E2-425D-813C-8975BBE5BF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

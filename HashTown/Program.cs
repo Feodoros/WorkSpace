@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace me
+namespace HashTown
 {
     class MainClass
     {

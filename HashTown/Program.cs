@@ -6,8 +6,7 @@ namespace me
     class MainClass
     {
         public static void Main(string[] args)
-        {
-            Console.OutputEncoding = Encoding.UTF8;
+        {Console.OutputEncoding = Encoding.UTF8;
 
             string[] arrTowns = { "Абросимовка", "Аксентьево"}
             string[] hashTable = MakeHashTable(arrTowns).Item1;

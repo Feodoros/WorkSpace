@@ -14,8 +14,8 @@ namespace Zoo
             Bird bird1 = new Bird(2, "Female", 1, 6, 110);
             bird1.GetInfo();
             
-            Fish fish1 = new Fish(3, "Male", "GoldenFish", 1, "Sea");
-            fish1.GetInfo();
+            Carp carp1 = new Carp(10, "Male", 4, "Sea", 7);
+            carp1.GetInfo();
         }
     }
 }

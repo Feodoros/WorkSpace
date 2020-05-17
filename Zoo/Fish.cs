@@ -2,7 +2,7 @@
 
 namespace Zoo
 {
-    public class Fish : Animal
+    public abstract class Fish : Animal
     {
         public string SeaOrRiver { get; set; }
 
@@ -19,8 +19,11 @@ namespace Zoo
         public override void GetInfo()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Age: {Age}, Sex: {Sex}, Name: {Name}, Weight: {Weight}, SeaOrRiver: {SeaOrRiver}.");
+            Console.WriteLine($"Age: {Age}, Sex: {Sex}, Name: {Name}, Weight: {Weight}.");
             Console.ResetColor();
         }
+
+        public abstract void GetFishInfo();
+
     }
 }

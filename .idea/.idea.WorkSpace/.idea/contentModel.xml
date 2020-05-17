@@ -165,6 +165,7 @@
       <e p="WorkSpace.sln" t="IncludeFlat" />
       <e p="Zoo" t="IncludeRecursive">
         <e p="Animal.cs" t="Include" />
+        <e p="Beast.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -2,11 +2,10 @@
 
 namespace Zoo
 {
-    public class Animal
+    public abstract class Animal
     {
-        //public string color;
-        
-        // Getters-Setters
+
+        #region Getters-Setters
         public int Age { get; set; }
 
         public string Sex { get; set; }
@@ -14,12 +13,12 @@ namespace Zoo
         public string Name { get; set; }
 
         public int Weight { get; set; }
+        
+        #endregion
 
-
-
-        // Constructor's 
+        #region Constructor's
         public Animal(int age, string sex, int weight)
-        {
+        { 
             Age = age;
             Sex = sex;
             Weight = weight;
@@ -34,11 +33,9 @@ namespace Zoo
             Weight = weight;
         }
 
-        public void GetInfo()
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Age: {Age}, Sex: {Sex}, Name: {Name}, Weight: {Weight}.");
-            Console.ResetColor();
-        }
+        #endregion
+
+        public abstract void GetInfo();
+
     }
 }

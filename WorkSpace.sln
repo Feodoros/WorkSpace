@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSearchFile", "HashSearc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTown", "HashTown\HashTown.csproj", "{83394D88-66E2-425D-813C-8975BBE5BF38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{83394D88-66E2-425D-813C-8975BBE5BF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83394D88-66E2-425D-813C-8975BBE5BF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83394D88-66E2-425D-813C-8975BBE5BF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -4,7 +4,7 @@ namespace Zoo
 {
     public abstract class Fish : Animal
     {
-        public string SeaOrRiver { get; set; }
+        public virtual string SeaOrRiver { get; set; }
 
         public Fish(int age, string sex, int weight, string seaOrRiver) : base(age, sex, weight)
         {

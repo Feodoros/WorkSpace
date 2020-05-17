@@ -18,7 +18,7 @@ namespace Zoo
             carp1.GetInfo();
             carp1.GetFishInfo();
             
-            Shark shark1 = new Shark(10, "Male", 4, "Sea");
+            Shark shark1 = new Shark(10, "Male", 4, "River");
             shark1.GetFishInfo();
         }
     }

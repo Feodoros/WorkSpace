@@ -26,7 +26,7 @@ namespace Zoo
         public override void GetInfo() 
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"Age: {Age}, Sex: {Sex}, Name: {Name}, Weight: {Weight}, Color: {Color}, Type: {Type}, IsAlpha: {isAlpha}");
+            Console.WriteLine($"Age: {Age}, Sex: {Sex}, Name: {Name}, Weight: {Weight}, Color: {Color}, Type: {Type}, IsAlpha: {isAlpha}.");
             Console.ResetColor();
         }
         

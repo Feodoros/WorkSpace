@@ -12,8 +12,12 @@ namespace Zoo
             
             newAnimal.GetInfo();
             newAnimal2.GetInfo();
- 
             
+            int x = newAnimal.Age;
+            newAnimal.Age = 12;
+            Console.WriteLine(x);
+            newAnimal.GetInfo();
+
         }
     }
 }

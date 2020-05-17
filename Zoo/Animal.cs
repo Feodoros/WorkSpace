@@ -4,11 +4,20 @@ namespace Zoo
 {
     public class Animal
     {
-        public int Age;
-        public string Sex;
-        public string Name;
-        public int Weight;
+        //public string color;
         
+        // Getters-Setters
+        public int Age { get; set; }
+
+        public string Sex { get; set; }
+
+        public string Name { get; set; }
+
+        public int Weight { get; set; }
+
+
+
+        // Constructor's 
         public Animal(int age, string sex, int weight)
         {
             Age = age;

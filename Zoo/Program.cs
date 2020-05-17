@@ -6,7 +6,14 @@ namespace Zoo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Animal newAnimal = new Animal(18, "Female", 12);
+
+            Animal newAnimal2 = new Animal(7, "Male", "Kesha", 12);
+            
+            newAnimal.GetInfo();
+            newAnimal2.GetInfo();
+ 
+            
         }
     }
 }

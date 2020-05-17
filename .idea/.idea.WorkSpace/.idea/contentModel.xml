@@ -163,6 +163,19 @@
         <e p="WordGen.csproj" t="IncludeRecursive" />
       </e>
       <e p="WorkSpace.sln" t="IncludeFlat" />
+      <e p="Zoo" t="IncludeRecursive">
+        <e p="Animal.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Zoo.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Zoo.csproj" t="IncludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

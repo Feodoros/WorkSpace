@@ -16,6 +16,10 @@ namespace Zoo
             
             Carp carp1 = new Carp(10, "Male", 4, "Sea", 7);
             carp1.GetInfo();
+            carp1.GetFishInfo();
+            
+            Shark shark1 = new Shark(10, "Male", 4, "Sea");
+            shark1.GetFishInfo();
         }
     }
 }

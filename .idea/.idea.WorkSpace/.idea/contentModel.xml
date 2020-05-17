@@ -168,6 +168,7 @@
         <e p="Beast.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Bird.cs" t="Include" />
+        <e p="Carp.cs" t="Include" />
         <e p="Fish.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -177,6 +178,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="Shark.cs" t="Include" />
         <e p="Zoo.csproj" t="IncludeRecursive" />
       </e>
     </e>

@@ -16,7 +16,6 @@ namespace Zoo
             JumpLenght = jumpLenght;
         }
 
-
         public override void GetFishInfo()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;

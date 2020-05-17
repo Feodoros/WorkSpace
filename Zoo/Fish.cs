@@ -23,7 +23,11 @@ namespace Zoo
             Console.ResetColor();
         }
 
-        public abstract void GetFishInfo();
-
+        public virtual void GetFishInfo()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"SeaOrRiver: {SeaOrRiver}.");
+            Console.ResetColor();
+        }
     }
 }

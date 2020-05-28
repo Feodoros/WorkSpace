@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTempMeasure", "BinTempMeasure\BinTempMeasure.csproj", "{4A6464D6-44E1-4DAB-AC99-F9494785CC69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsMaxSubString", "ContainsMaxSubString\ContainsMaxSubString.csproj", "{844D7F90-D86B-4DC8-93FC-757DA9751857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{4A6464D6-44E1-4DAB-AC99-F9494785CC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A6464D6-44E1-4DAB-AC99-F9494785CC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A6464D6-44E1-4DAB-AC99-F9494785CC69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

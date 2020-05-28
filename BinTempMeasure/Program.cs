@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BinTempMeasure
 {
@@ -10,12 +11,24 @@ namespace BinTempMeasure
         {
             string filePAth = $"{Environment.CurrentDirectory}\\data.bin";
             
-            double[] testArr = new double[] {50.9};
+            double[] testArr = new double[]
+            {
+                50.9, 45.6, 50.9, 45.6 , 
+                50.9, 45.6, 50.9, 45.6,
+                50.9, 45.6, 50.9, 45.6,
+                50.9, 45.6, 50.9, 45.6,
+                50.9, 45.6, 50.9, 45.6
+            };
+            
+            double x = MeanTemperature(testArr);
             
             WriteFile(testArr, filePAth);
 
+            
+            
             double[] data = ReadFile(filePAth);
 
+            
             // Первый запуск:
             // Создаем начальный массив и записываем его в файл в конце
 
@@ -63,6 +76,26 @@ namespace BinTempMeasure
                     writer.Write(Math.Round(temperature, 2));
                 }
             }
+        }
+
+        private static double MeanTemperature(double[] data)
+        {
+            double mean = 0;
+            
+            List<double> dataList = data.ToList();
+            dataList.Sort();
+            
+            int fivePerCent = dataList.Count / 20;
+            
+            for (int i = 0; i < fivePerCent; i++)
+            {
+                dataList.RemoveAt(0);
+                dataList.RemoveAt((dataList.Count - 1));
+            }
+
+            mean = dataList.Sum() / dataList.Count;
+            
+            return mean;
         }
     }
 }

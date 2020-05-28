@@ -31,6 +31,18 @@ namespace ContainsMaxSubString
         }
         
         
-       
+        private static bool ListContainsSubString(string pattern, string text)
+        {
+            List<string> listMatches = pattern.Split('*').ToList();
+            
+            int check = 1;
+            
+            foreach (var match in listMatches)
+            {
+                check *= Convert.ToInt32(text.Contains(match));
+            }
+            
+            return Convert.ToBoolean(check);
+        }
     }
 }

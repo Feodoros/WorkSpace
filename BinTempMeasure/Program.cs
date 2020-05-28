@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace BinTempMeasure
 {
@@ -11,32 +12,36 @@ namespace BinTempMeasure
         {
             string filePAth = $"{Environment.CurrentDirectory}\\data.bin";
             
-            double[] testArr = new double[]
+            double[] dataArr;
+            
+            // Первый запуск
+            if (!File.Exists(filePAth))
             {
-                50.9, 45.6, 50.9, 45.6 , 
-                50.9, 45.6, 50.9, 45.6,
-                50.9, 45.6, 50.9, 45.6,
-                50.9, 45.6, 50.9, 45.6,
-                50.9, 45.6, 50.9, 45.6
-            };
-            
-            double x = MeanTemperature(testArr);
-            
-            WriteFile(testArr, filePAth);
+                double[] defaultArr = new double[]
+                {
+                    50.9, 45.6, 50.9, 45.6 , 
+                    50.9, 45.6, 50.9, 45.6,
+                    50.9, 45.6, 50.9, 45.6,
+                    50.9, 45.6, 50.9, 45.6,
+                    50.9, 45.6, 50.9, 45.6
+                };
 
+                dataArr = defaultArr;
+            }
             
+            // Повторный запуск
+            else
+            {
+                dataArr = ReadFile(filePAth);
+            }
             
-            double[] data = ReadFile(filePAth);
+            double mean = MeanTemperature(dataArr);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"Среднее арифметическое: {mean}");
+            Console.ResetColor();
 
+            WriteFile(dataArr, filePAth);
             
-            // Первый запуск:
-            // Создаем начальный массив и записываем его в файл в конце
-
-            // Повторный запуск:
-            // Считываем массив с файла
-            // Спрашиваем хочет ли пользователь добавить эл-ты в массив
-            // Добавляем элементы в массив и в конце программы записываем новый массив в файл
-
         }
 
 
@@ -45,7 +50,7 @@ namespace BinTempMeasure
         {
             List<double> listData = new List<double>(){};
 
-            using (BinaryReader reader = new BinaryReader(File.Open(filePath, FileMode.Open)))
+            using (BinaryReader reader = new BinaryReader(File.Open(filePath, FileMode.Open), Encoding.ASCII))
             {
                 while (reader.PeekChar() > -1)
                 {
@@ -78,6 +83,7 @@ namespace BinTempMeasure
             }
         }
 
+        // Вычисляем среднее значение температур (отбрасывая 5% сверху и снизу)
         private static double MeanTemperature(double[] data)
         {
             double mean = 0;

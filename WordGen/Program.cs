@@ -10,7 +10,11 @@ namespace WordGen
         {
             int numberElements = 2;
             int length = 3;
-            
+            List<int> x = new List<int>();
+            x.IndexOf(x.Max());
+            Stack<int> y = new Stack<int>();
+            int[] z = new[] {1, 2, 3, 5};
+            int m = z.Max();
             // Заполняем массив буквами
             char[] letters = LetterArray(numberElements);
             

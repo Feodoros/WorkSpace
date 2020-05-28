@@ -8,7 +8,7 @@ namespace HashTown
         public static void Main(string[] args)
         {Console.OutputEncoding = Encoding.UTF8;
 
-            string[] arrTowns = { "Абросимовка", "Аксентьево"}
+            string[] arrTowns = {"Абросимовка", "Аксентьево"};
             string[] hashTable = MakeHashTable(arrTowns).Item1;
             int count = MakeHashTable(arrTowns).Item2;
 

@@ -8,8 +8,8 @@ namespace Cross
     {
         static void Main(string[] args)
         {
-            string[] words = { "УЛИТКА", "ПОТОК", "ПЛЮЩ", "БУМ", "СМЕХ" };
-            string mainWord = "ЛОПУХ";
+            string[] words = { "ПОМИДОР", "МОРКОВЬ", "ОГУРЕЦ", "ЗАЩЕКАН" };
+            string mainWord = "ОВОЩ";
 
             List<char[]> finalTable = MakeTable(words, mainWord);
             Print(finalTable, mainWord);

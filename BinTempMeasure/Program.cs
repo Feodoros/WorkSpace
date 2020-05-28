@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace BinTempMeasure
@@ -9,8 +10,11 @@ namespace BinTempMeasure
         {
             string filePAth = $"{Environment.CurrentDirectory}\\data.bin";
             
-            int[] testArr = new[] {1, 2, 3, 4, 5};
+            double[] testArr = new double[] {50.9};
+            
             WriteFile(testArr, filePAth);
+
+            double[] data = ReadFile(filePAth);
 
             // Первый запуск:
             // Создаем начальный массив и записываем его в файл в конце
@@ -24,21 +28,39 @@ namespace BinTempMeasure
 
 
         // Считываем информацию с файла
-        private int[] ReadFile(string filePath)
+        private static double[] ReadFile(string filePath)
         {
-            int count = 0;
-            int[] data = new int[count];
-            return data;
+            List<double> listData = new List<double>(){};
+
+            using (BinaryReader reader = new BinaryReader(File.Open(filePath, FileMode.Open)))
+            {
+                while (reader.PeekChar() > -1)
+                {
+                    listData.Add(Math.Round(reader.ReadDouble(), 2));
+                }
+            }
+            
+            return listData.ToArray();
         }
         
         // Запись информации в файл
-        private static void WriteFile(int[] data, string filePath)
+        private static void WriteFile(double[] data, string filePath)
         {
+            // Чистим файл
+            using(FileStream fs = File.Open(filePath,FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                lock(fs)
+                {
+                    fs.SetLength(0);
+                }
+            }
+            
+            // Записываем в файл
             using (BinaryWriter writer = new BinaryWriter(File.Open(filePath, FileMode.OpenOrCreate)))
             {
-                foreach (int temperature in data)
+                foreach (double temperature in data)
                 {
-                    writer.Write(temperature);
+                    writer.Write(Math.Round(temperature, 2));
                 }
             }
         }

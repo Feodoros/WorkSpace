@@ -5,16 +5,14 @@ namespace CarInterface
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-
+        {            
             Person person = new Person();
             Car car = new Car();
 
             Action(person);
             Action(car);
 
-
+            Console.ReadLine();
         }
 
         static void Action(IMovable movable)

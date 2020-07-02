@@ -8,7 +8,12 @@ namespace CarInterface
     {
         public event IMovable.MoveHandler MoveEvent;
 
-        void IMovable.Move()
+        public void Boost()
+        {
+            Console.WriteLine("Ускоряемся пешком");
+        }
+
+        public void Move()
         {
             Console.WriteLine("Идем пешком");
         }

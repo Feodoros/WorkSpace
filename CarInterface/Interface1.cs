@@ -10,14 +10,12 @@ namespace CarInterface
         const int minSpeed = 0;
         static int maxSpeed = 15;
 
-        internal void Move()
-        {
-            Console.WriteLine("Default");
-        }
+        public void Move();
+
+        public void Boost(); 
        
         delegate void MoveHandler(string message);
 
         event MoveHandler MoveEvent;
-
     }
 }

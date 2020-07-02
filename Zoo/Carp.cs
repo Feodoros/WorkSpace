@@ -2,7 +2,7 @@
 
 namespace Zoo
 {
-    public class Carp : Fish
+    public sealed class Carp : Fish
     {
         public int JumpLenght { get; set; }
 

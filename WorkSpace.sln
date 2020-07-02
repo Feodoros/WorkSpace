@@ -1,36 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinSearch", "BinSearch\BinSearch.csproj", "{190DBEE8-63A4-4481-A510-E9F7A7198A31}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinSearch", "BinSearch\BinSearch.csproj", "{190DBEE8-63A4-4481-A510-E9F7A7198A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryDeepth", "DirectoryDeepth\DirectoryDeepth.csproj", "{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryDeepth", "DirectoryDeepth\DirectoryDeepth.csproj", "{49223469-04AC-44DE-96C2-4C1CC7A4E2B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortByLength", "SortByLength\SortByLength.csproj", "{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortByLength", "SortByLength\SortByLength.csproj", "{DEBE90F7-982D-42B9-AFBB-80EFE5C50AE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cross", "Cross\Cross.csproj", "{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cross", "Cross\Cross.csproj", "{0470EFE9-0C0E-4FF0-B089-C7E49901F61C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordGen", "WordGen\WordGen.csproj", "{39514378-E24C-4DBB-BABD-69B242C389D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordGen", "WordGen\WordGen.csproj", "{39514378-E24C-4DBB-BABD-69B242C389D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeSort", "MergeSort\MergeSort.csproj", "{EC56AD8A-F36E-49C4-B1A6-039A35ABFCA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{E2255E18-05C7-4495-A247-23ECE8511EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{E2255E18-05C7-4495-A247-23ECE8511EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCFindSimilar", "PCFindSimilar\PCFindSimilar.csproj", "{69CA6710-A308-4712-8065-37858D48597B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCFindSimilar", "PCFindSimilar\PCFindSimilar.csproj", "{69CA6710-A308-4712-8065-37858D48597B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HanoiTowards", "HanoiTowards\HanoiTowards.csproj", "{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HanoiTowards", "HanoiTowards\HanoiTowards.csproj", "{B047D1D5-2B9C-4F6B-9D39-A886EF00C19E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmRutishauser", "AlgorithmRutishauser\AlgorithmRutishauser.csproj", "{8CA32844-F668-4328-AE40-AFDD9FB7D28B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmRutishauser", "AlgorithmRutishauser\AlgorithmRutishauser.csproj", "{8CA32844-F668-4328-AE40-AFDD9FB7D28B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestPath", "LargestPath\LargestPath.csproj", "{FCCC4CCA-8E2A-48DF-9D69-53CEA41A73AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargestPath", "LargestPath\LargestPath.csproj", "{FCCC4CCA-8E2A-48DF-9D69-53CEA41A73AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSearchFile", "HashSearchFile\HashSearchFile.csproj", "{717AFA70-88BF-45BD-BCB5-3599B2879ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashSearchFile", "HashSearchFile\HashSearchFile.csproj", "{717AFA70-88BF-45BD-BCB5-3599B2879ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTown", "HashTown\HashTown.csproj", "{83394D88-66E2-425D-813C-8975BBE5BF38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashTown", "HashTown\HashTown.csproj", "{83394D88-66E2-425D-813C-8975BBE5BF38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{F5722962-D0AF-4D89-AA20-B6D4DB424F7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTempMeasure", "BinTempMeasure\BinTempMeasure.csproj", "{4A6464D6-44E1-4DAB-AC99-F9494785CC69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinTempMeasure", "BinTempMeasure\BinTempMeasure.csproj", "{4A6464D6-44E1-4DAB-AC99-F9494785CC69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsMaxSubString", "ContainsMaxSubString\ContainsMaxSubString.csproj", "{844D7F90-D86B-4DC8-93FC-757DA9751857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainsMaxSubString", "ContainsMaxSubString\ContainsMaxSubString.csproj", "{844D7F90-D86B-4DC8-93FC-757DA9751857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInterface", "CarInterface\CarInterface.csproj", "{48E4181E-BFA5-42FC-9E62-E7E30573453C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,5 +107,15 @@ Global
 		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{844D7F90-D86B-4DC8-93FC-757DA9751857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9D9DA1B-96E8-44AA-B85C-52252B6972E6}
 	EndGlobalSection
 EndGlobal

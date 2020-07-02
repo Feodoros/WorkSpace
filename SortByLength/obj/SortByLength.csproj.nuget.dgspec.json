@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fedor\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj": {}
+    "E:\\Projects\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fedor\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj": {
+    "E:\\Projects\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fedor\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj",
+        "projectUniqueName": "E:\\Projects\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj",
         "projectName": "SortByLength",
-        "projectPath": "C:\\Users\\Fedor\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj",
+        "projectPath": "E:\\Projects\\RiderProjects\\WorkSpace\\SortByLength\\SortByLength.csproj",
         "packagesPath": "C:\\Users\\Fedor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fedor\\RiderProjects\\WorkSpace\\SortByLength\\obj\\",
+        "outputPath": "E:\\Projects\\RiderProjects\\WorkSpace\\SortByLength\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fedor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,18 +47,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

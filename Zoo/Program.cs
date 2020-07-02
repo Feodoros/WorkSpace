@@ -6,7 +6,8 @@ namespace Zoo
     {
         static void Main(string[] args)
         {
-            
+            Animal animal = new Animal(12, "dsds", 112);
+
             Beast beast1 = new Beast(13, "Male", "Alpha", 12, "White", "Wolf");
             
             beast1.GetInfo();

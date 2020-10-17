@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinTempMeasure", "BinTempMe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainsMaxSubString", "ContainsMaxSubString\ContainsMaxSubString.csproj", "{844D7F90-D86B-4DC8-93FC-757DA9751857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInterface", "CarInterface\CarInterface.csproj", "{48E4181E-BFA5-42FC-9E62-E7E30573453C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInterface", "CarInterface\CarInterface.csproj", "{48E4181E-BFA5-42FC-9E62-E7E30573453C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceMove", "InterfaceMove\InterfaceMove.csproj", "{EA170A93-F270-4248-9B9E-41B961149BC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48E4181E-BFA5-42FC-9E62-E7E30573453C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA170A93-F270-4248-9B9E-41B961149BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA170A93-F270-4248-9B9E-41B961149BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA170A93-F270-4248-9B9E-41B961149BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA170A93-F270-4248-9B9E-41B961149BC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
